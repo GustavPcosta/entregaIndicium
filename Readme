@@ -1,0 +1,19 @@
+# Projeto de Pipeline de Dados
+
+Este projeto é um pipeline de dados construído com Node.js e Express. Ele extrai dados de uma tabela 'customers' em um banco de dados PostgreSQL, realiza pré-processamento e análise nos dados, e escreve os dados em um disco local.
+
+## Instalação
+
+Para instalar as dependências do projeto, execute o seguinte comando:
+
+```bash
+npm install
+ao iniciar
+1 abra o terminal no vscode ou qualquer outra IDE que tenha suporte para nodejs
+2  digite os comando npm run dev
+3  o servidor ficará aberto onde atualizará em qualquer alteração por conta da biblioteca nodemon
+
+rotas
+GET /list: Esta rota retorna uma lista de todos os clientes no banco de dados.
+POST /pre-process: Esta rota recebe dados através do corpo da solicitação, processa os dados, e retorna os dados processados.
+POST /analyzed: Esta rota recebe dados através do corpo da solicitação, realiza uma consulta ao banco de dados com base nesses dados, e retorna os resultados da consulta.
