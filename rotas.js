@@ -1,8 +1,9 @@
 const express = require('express');
-const {listData, analyzedData} = require('./data/controller/dados');
+const {listData, analyzedData, serv} = require('./data/controller/dados');
 const { preprocessData } = require('./data/controller/dados');
 const router = express();
 router.get('/list', listData);
+router.get("/",serv)
 
 // router.get('/writeData', async (req, res) => {
 //     const data = await listData(); // Supondo que listData retorna os dados que você quer escrever

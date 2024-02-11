@@ -1,6 +1,19 @@
+const { assert } = require('console');
 const db = require('../conexao/db');
 const fs = require('fs')
 const  path = require('path')
+
+
+
+const serv = async(req,res)=>{
+    try {
+        res.send("servidor rodando")
+    } catch (error) {
+        return res.status(500).json(error.message)
+    }
+}
+
+
 
 const listData = async(req,res)=>{
     try {
@@ -63,5 +76,6 @@ module.exports= {
     listData,
    preprocessData,
    analyzedData,
-   writeData
+   writeData,
+   serv
 }
